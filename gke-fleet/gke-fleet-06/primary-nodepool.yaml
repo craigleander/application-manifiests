@@ -1,0 +1,17 @@
+apiVersion: fleet.stackgen.io/v1
+kind: GKENodePoolRotation
+metadata:
+  name: primary
+  labels:
+    stackgen.io/stack-id: gke-fleet-06
+    stackgen.io/cluster: dev-cluster-06
+spec:
+  cluster: dev-cluster-06
+  nodePool: primary
+  region: us-central1
+  kubernetesVersion: "1.29.0"
+  upgradeSettings:
+    maxSurge: 2
+    maxUnavailable: 0
+  managedBy: aiden-fleet-pipeline
+  updatedAt: "2026-07-12T06:53:04.544725+00:00"
